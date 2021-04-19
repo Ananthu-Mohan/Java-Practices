@@ -1,0 +1,58 @@
+package classdemo;
+
+public class largestNsecond {
+	static int secondlargest = 0;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input1=4079,input2=5028,input3=9119;
+		int[]number = new int[] {input1,input2,input3};
+		int[]max = new int[number.length];
+		int[]secondMax = new max[number.length];
+		for(int i=0;i<number.length;i++)
+		{
+			max[i] = largest(number[i]);
+		}
+		System.out.println(max + ","+secondlargest);
+	}
+	public static int largest(int number)
+	{
+		int temp = number;
+		int rem = 0,max= 0,max2=0,index=0,no=0;
+		String str="",str_max="";
+		while(temp!=0)
+		{
+			rem = temp%10;
+			if(rem>max)
+			{
+				max = rem;
+			}
+			temp /=10;
+		}
+		str = String.valueOf(number);
+		str_max = String.valueOf(max);
+		StringBuffer sbuff = new StringBuffer(str);
+		index = sbuff.indexOf(str_max);
+		sbuff = sbuff.deleteCharAt(index);
+		no = Integer.parseInt(sbuff.toString());
+		secondLarge(no);
+		return  max;
+		
+	}
+	public static void secondLarge(int no)
+	{
+		int temp = no;
+		int rem = 0,max= 0,max2=0,index=0;
+		temp = no;
+		while(temp!=0)
+		{
+			rem = temp%10;
+			if(rem>max2)
+			{
+				max2 = rem;
+			}
+			temp /=10;
+		}
+		secondlargest = max2;
+	}
+
+}

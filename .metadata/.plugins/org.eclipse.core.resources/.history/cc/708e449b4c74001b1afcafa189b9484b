@@ -1,0 +1,32 @@
+package extra;
+
+public class Extraction_Matching {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input1 ="Wipro";
+		String input2 ="Technologies";
+		int input3 =0;
+		int input4 =0;
+		String output="";
+		if(input3 ==0)
+		{
+			output = DonotOccur(input1,input2);
+			if(input4 == 0)
+			{
+				output = output.toLowerCase();
+			}
+			else
+			{
+				output = output.toUpperCase();
+			}
+		}
+		System.out.println(output);
+	}
+	public static String DonotOccur(String str1,String str2)
+	{
+		String output="";
+		return output;
+	}
+
+}

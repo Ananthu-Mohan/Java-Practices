@@ -1,0 +1,11 @@
+package classdemo;
+
+public class largestNsecond {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+
+}

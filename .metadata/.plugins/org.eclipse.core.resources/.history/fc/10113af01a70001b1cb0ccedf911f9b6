@@ -1,0 +1,13 @@
+package classdemo;
+
+public class count_charcters {
+	static int MAX_CHARS =256;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str="Ananthu";
+		str = str.toLowerCase();
+		
+
+	}
+
+}

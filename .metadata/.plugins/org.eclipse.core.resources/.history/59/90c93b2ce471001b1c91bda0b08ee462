@@ -1,0 +1,46 @@
+package extra;
+
+public class RSF {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input1 = 5271;
+		int count = 0;
+		int temp = input1;
+		int i = 0;
+		int[]arr = new int[10];
+		int rem,rev= 0;
+//		while(temp>99)
+		{
+			
+		}
+		while(temp!=0)
+		{
+			rem = temp%10;
+			count++;
+			temp = temp/10;
+		}
+		
+
+		while(temp!=0)
+		{
+			rem = temp%10;
+			rev = rev*10+rem;
+			temp = temp/10;
+		}
+		temp =rev;
+		while(temp!=0)
+		{
+			rem = temp%10;
+			arr[i] = rem;
+			temp = temp/10;
+			i++;
+		}
+		for(i=0;i<arr.length;i++)
+		{
+			
+		}
+		
+	}
+
+}

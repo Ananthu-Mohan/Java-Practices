@@ -1,0 +1,79 @@
+package extra;
+
+public class Extraction_Matching {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input1 ="Wipro";
+		String input2 ="Technologies";
+		int input3 =0;
+		int input4 =0;
+		String output="";
+		if(input3 ==0)
+		{
+			output = DonotOccur(input1,input2);
+			if(input4 == 0)
+			{
+				output = output.toLowerCase();
+			}
+			else
+			{
+				output = output.toUpperCase();
+			}
+		}
+		System.out.println(output);
+	}
+	public static String DonotOccur(String str1,String str2)
+	{
+		String output="";
+		String output1="",output2="";
+		char ch1 ='\0';
+		char ch2 ='\0';
+		boolean flag =false;
+		for(int i=0;i<str1.length();i++)
+		{
+			ch1 = str1.charAt(i);
+			for(int j=0;j<str2.length();j++)
+			{
+				ch2 = str2.charAt(j);
+				if(ch1 != ch2)
+				{
+					flag = true;
+				}
+				else
+				{
+					flag = false;
+					break;
+				}
+			}
+			if(flag == true)
+			{
+				output1 +=ch1;
+			}
+		}
+		for(int i=0;i<str2.length();i++)
+		{
+			ch1 = str2.charAt(i);
+			for(int j=0;j<str1.length();j++)
+			{
+				ch2 = str1.charAt(j);
+				if(ch1 != ch2)
+				{
+					flag = true;
+				}
+				else
+				{
+					flag = false;
+					break;
+				}
+			}
+			if(flag == true)
+			{
+				output2 +=ch2;
+			}
+		}
+		output = output1+output2;
+		return output;
+	}
+
+}

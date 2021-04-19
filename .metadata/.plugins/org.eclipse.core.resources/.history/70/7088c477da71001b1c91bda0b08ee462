@@ -1,0 +1,41 @@
+package extra;
+
+public class Scream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] input1 = {20,2,9,19};
+		//b,b+a,b+2a,b+3a...
+		//d,d+c,d+2c,d+3c..
+		
+		boolean flag = true;
+		
+		int a = input1[0];
+		int b = input1[1];
+		int c = input1[2];
+		int d = input1[3];
+		
+		int sum_jack = 0;
+		int sum_jill = 0;
+		
+		int i = 0;
+		
+		while(true)
+		{
+			sum_jack += b+(i*a);
+			sum_jill += d+(i*c);
+		
+			if(sum_jack == sum_jill)
+			{
+				break;
+			}
+			else
+			{
+				flag = false;
+			}
+			i++;
+		}
+		System.out.println(sum_jack);
+	}
+
+}

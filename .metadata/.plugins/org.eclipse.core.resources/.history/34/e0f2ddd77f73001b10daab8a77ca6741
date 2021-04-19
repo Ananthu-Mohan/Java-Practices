@@ -1,0 +1,12 @@
+package extra;
+
+public class CharacterOrSumDigits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input1 = "1W2i3p4r5o6";
+		int input2 = 0;
+		
+	}
+
+}

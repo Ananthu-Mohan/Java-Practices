@@ -1,0 +1,50 @@
+package extra;
+
+public class Unique_array {
+	static int MAX_CHARS = 256;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char [] input1 = {'A','B','C'};
+		char [] input2 = {'B','C'};
+		int output=0,sum=0;
+		int key ;
+		char [] count = new char[MAX_CHARS];
+		
+		for(int i=0;i<input1.length;i++)
+		{
+			key = (int)input1[i];
+			count[key]++;
+		}
+		for(int i=0;i<input2.length;i++)
+		{
+			key = (int)input2[i];
+			count[key]++;
+		}
+		
+		for(int i=0;i<count.length;i++)
+		{
+			if(count[i]==0)
+			{
+				continue;
+			}
+			if(count[i]==1)
+			{
+				sum += i;
+			}
+		}
+		System.out.println("Key = "+sum);
+		int temp;
+		int total = 0,rem = 0;
+		while(sum>9)
+		{	temp = sum;
+			while(temp!=0)
+			{
+				rem = temp%10;
+				total +=rem;
+				temp /= 10;
+			}
+			System.out.println(total);
+		}
+	}
+
+}

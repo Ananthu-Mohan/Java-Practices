@@ -1,0 +1,14 @@
+package extra;
+
+public class CountTheVowels {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input1 = "CauliFlower";
+		char ch ='\0';
+		char[] vowels = new char[] {'a','e','i','o','u'};
+		
+		//How many vowels in the given String
+	}
+
+}

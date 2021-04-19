@@ -1,0 +1,13 @@
+package extra;
+
+public class RSF {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input1 = 5271;
+		String number = Integer.toString(input1);
+		
+		
+	}
+
+}

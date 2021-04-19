@@ -1,0 +1,13 @@
+package extra;
+
+public class Unique_array {
+	static int MAX_CHARS = 256;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char [] input1 = {'A','B','C'};
+		char [] input2 = {'B','C'};
+		int output=0,sum=0;
+		char [] count = new char[MAX_CHARS];
+	}
+
+}

@@ -1,0 +1,14 @@
+package extra;
+
+public class CoolDrink {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input1 = 5;
+		int[] input2 = new int[]{3,10,8,6,11};
+		int input3 = 4;
+		int[] input4 = new int[]{1,10,3,11};
+		
+	}
+
+}

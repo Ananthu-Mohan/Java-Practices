@@ -1,0 +1,90 @@
+package extra;
+
+public class Hard_Reverse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int case_option = 1;
+		String input = "I Am alWays 24#7 Busy.";
+		System.out.println(input);
+		String output ="";
+		if(case_option ==0)
+		{
+			output = Zero(input);
+		}
+		else
+		{
+			output = One(input);
+		}
+		//System.out.println(output);
+	}
+	public static String Zero(String str)
+	{
+		String[] words = str.split(" ");
+		String reverse ="";
+		for(String s:words)
+		{
+			StringBuffer sbuff = new StringBuffer(s);
+			sbuff = sbuff.reverse();
+			reverse +=sbuff.toString()+" ";
+		}
+		System.out.println(reverse);
+		return "0";
+	}
+	public static String One(String str)
+	{
+		String[] words = str.split(" ");
+		String reverse ="";
+		char ch ='\0';
+		char extract ='\0';
+		for(String s:words)
+		{
+			
+			int[] index_capital = new int[s.length()];
+			if(s.length()==1)
+			{
+				reverse += s;
+			}
+			else
+			{
+				for(int i=0;i<s.length();i++)
+				{
+					ch = s.charAt(i);
+					if(Character.isUpperCase(ch))
+					{
+						int key = s.indexOf(ch);
+						index_capital[key]++;
+					}
+				}
+				StringBuffer sbuff = new StringBuffer(s.toLowerCase());
+				sbuff = sbuff.reverse();
+					for(int i=0;i<index_capital.length;i++)
+					{
+						if(index_capital[i]==0)
+						{
+							continue;
+						}
+						else
+						{
+
+							extract = Character.toUpperCase(sbuff.charAt(i));
+							sbuff = sbuff.deleteCharAt(i);
+							sbuff = sbuff.insert(i, extract);
+						}
+					}
+					if((sbuff.charAt(0)==',')||(sbuff.charAt(0)=='.'))
+					{
+						extract = Character.toUpperCase(sbuff.charAt(sbuff.length()-1));
+						sbuff = sbuff.deleteCharAt(sbuff.length()-1);
+						sbuff = sbuff.insert(sbuff.length(), extract);
+					}
+
+					System.out.println();
+					System.out.println(sbuff);
+				}
+				
+			}
+		return "0";
+	}
+
+}

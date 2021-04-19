@@ -1,0 +1,32 @@
+package extra;
+
+public class CharacterOrSumDigits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input1 = "1W2i3p4r5o6";
+		int input2 = 0;
+		int sum = 0;
+		if(input2 ==0)
+		{
+			sum = SumDigits(input1);
+		}
+	}
+	public static int SumDigits(String str)
+	{
+		char ch ='\0';
+		int sum = 0,key = 0;
+		for(int i=0;i<str.length();i++)
+		{
+			ch = str.charAt(i);
+			if(Character.isDigit(ch))
+			{
+				key = str.charAt(i)-48;
+				sum+=key;
+			}
+		}
+		System.out.println(sum);
+		return sum;
+	}
+
+}

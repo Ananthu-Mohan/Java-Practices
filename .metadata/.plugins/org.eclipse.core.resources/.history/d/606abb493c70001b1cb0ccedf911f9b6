@@ -1,0 +1,12 @@
+package extra;
+import java.util.*;
+
+public class reducedArrCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner S = new Scanner(System.in);
+		
+	}
+
+}

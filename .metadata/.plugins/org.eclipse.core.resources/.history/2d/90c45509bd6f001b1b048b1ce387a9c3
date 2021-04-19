@@ -1,0 +1,30 @@
+package classdemo;
+
+public class largestNsecond {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int number = 5478;
+		int temp = number;
+		int rem = 0,max= 0,max2=0,index=0,no=0;
+		String str="",str_max="";
+		while(temp!=0)
+		{
+			rem = temp%10;
+			if(rem>max)
+			{
+				max = rem;
+			}
+			temp /=10;
+		}
+		str = String.valueOf(number);
+		str_max = String.valueOf(max);
+		System.out.println(str_max);
+		StringBuffer sbuff = new StringBuffer(str);
+		index = sbuff.indexOf(str_max);
+		
+		
+
+	}
+
+}

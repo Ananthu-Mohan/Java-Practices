@@ -1,0 +1,28 @@
+package extra;
+
+public class piggBank {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[]odd =new int[10];
+		int[]even = new int[10];
+		int input2 =2;
+		int sum_odd = 0;
+		for(int i=1;i<10;i=i+2)
+		{
+			odd[i] = input2;
+			input2 = input2*2;
+		}
+		for(int i=1;i<10;i=i+2)
+		{
+			sum_odd+=odd[i];
+		}
+		System.out.println(sum_odd);
+		
+		for(int i=2;i<10;i=i+2)
+		{
+			System.out.println(i);
+		}
+	}
+
+}

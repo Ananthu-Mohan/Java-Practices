@@ -1,0 +1,41 @@
+package extra;
+
+public class CharacterOrSumDigits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input1 = "1W2i3p4r5o6";
+		int input2 = 0;
+		int sum = 0;
+		if(input2 ==0)
+		{
+			sum = SumDigits(input1);
+			System.out.println(sum);
+		}
+	}
+	public static int SumDigits(String str)
+	{
+		char ch ='\0';
+		int sum = 0,key = 0;
+		boolean flag=  true;
+		for(int i=0;i<str.length();i++)
+		{
+			ch = str.charAt(i);
+			if(Character.isDigit(ch))
+			{
+				key = str.charAt(i)-48;
+				sum+=key;
+			}
+			else
+			{
+				flag = true;
+			}
+		}
+		if(flag == true)&&(sum ==0)
+		{
+			sum =0;
+		}
+		return sum;
+	}
+
+}

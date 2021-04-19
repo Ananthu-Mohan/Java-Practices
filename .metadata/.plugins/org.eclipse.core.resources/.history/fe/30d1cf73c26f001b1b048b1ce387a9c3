@@ -1,0 +1,84 @@
+package extra;
+import java.util.*;
+public class secretCode {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner S = new Scanner(System.in);
+		String str = new String();
+		int upperCount = 0;
+		int input1,input2,input3;
+		System.out.println("Enter the String ");
+		str = S.next();
+		System.out.println("Enter the number 1 ");
+		input1 = S.nextInt();
+		System.out.println("Enter the number 2 ");
+		input2 = S.nextInt();
+		System.out.println("Enter the number 3 ");
+		input3 = S.nextInt();
+		int rem = 0;
+		int[] input = new int[] {input1,input2,input3};
+		int[] temp = Arrays.copyOf(input, 3);
+		int[] max = new int[3];
+		int[] max2 = new int[3];
+		for(int i=0;i<temp.length;i++)
+		{
+			while(temp[i]!=0)
+			{
+				rem = temp[i]%10;
+				if(rem>max[i])
+				{
+					max[i] =  rem;
+				}
+				temp[i] = temp[i] / 10;
+			}
+		}
+		for(int i =0;i<3;i++)
+		{
+			System.out.println(max[i]);
+		}
+//		for(int i=0;i<input.length;i++)
+//		{
+//			System.out.print(input[i]+" ");
+//		}
+		for(int i=0;i<temp.length;i++)
+		{
+			max2[i] = max[i];
+			while(input[i]!=0)
+			{
+				rem = input[i]%10;
+				if((rem<max[i])&&(rem>=max2[i])) //rem should be less than our largest and greater than our max2
+				{
+					max2[i] =  rem;
+					break;
+				}
+				input[i] = input[i] / 10;
+			}
+		}
+		
+		System.out.println("Second Largest ");
+		for(int i =0;i<3;i++)
+		{
+			System.out.println(max2[i]);
+		}
+		
+		for(int i=0;i<str.length();i++)
+		{
+			if(Character.isUpperCase(str.charAt(i)))
+			{
+				upperCount++;
+			}
+		}
+		//System.out.println("Upper case Count = "+upperCount);
+		int sum = 0;
+		for(int i=0;i<2;i++)
+		{
+			sum +=(max[i]*max2[i]);
+		}
+		int diff = max[2]*max2[2];
+		int total = (sum-diff)*upperCount;
+		System.out.println(total);
+		
+	}
+
+}

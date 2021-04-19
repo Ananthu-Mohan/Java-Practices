@@ -1,0 +1,26 @@
+package extra;
+
+public class RSF {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input1 = 5271;
+		
+		int result = input1;
+		
+		while(result>99)
+		{
+			result = RFS(result);
+		}
+		
+	}
+	public static int RFS(int number)
+	{
+		
+		String str = Integer.toString(number);
+		int k = (int)str.charAt(0)
+		return 0;
+	}
+	
+	
+}

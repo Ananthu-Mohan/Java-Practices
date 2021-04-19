@@ -1,0 +1,24 @@
+package extra;
+
+public class AverageRounfOff {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] input1 = {8,9,11,14,15};
+		int input2 = 5;
+		int sum =0;
+		float avg = 0,diff = 0;
+		for(int i=0;i<input2;i++)
+		{
+			sum +=input1[i];
+		}
+		avg = (float)sum/input2;
+		System.out.println("Average in float = "+avg);
+		System.out.println("Average in Integer = "+(int)avg);
+		
+		diff =(float)Math.floor(avg);
+		System.out.println("Difference  = "+diff);
+
+	}
+
+}

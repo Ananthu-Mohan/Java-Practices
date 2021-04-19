@@ -1,0 +1,70 @@
+package mettle_projects;
+import java.util.*;
+import java.io.*;
+public class Eshwitha_Str {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int cnt=0;
+
+		String inp1="fi_er";
+
+		String inn=inp1;//this is bcz no problem should occur in further iteration
+
+		String inp2="fever:filer:filter:fiber";
+		StringBuffer s1=new StringBuffer();
+
+		int len=inp1.length();
+		//String arr[]=new String[15];
+		String a1[]=inp2.split(":");
+
+		int k=0;
+		for(int i=0;i<a1.length;i++)//i m counting how many words are of length 5 so that i can create string array   arr  which is in line 36 ......
+		{
+			//System.out.println(a1[i].length());
+			if(a1[i].length()==len)
+			{
+				cnt++;
+
+			}
+		}
+
+		System.out.println(cnt);
+
+		String arr[]=new String[cnt];
+
+		for(int i=0;i<a1.length;i++)//putting words of length 5 to arr[k]
+		{
+			//System.out.println(a1[i].length());
+			if(a1[i].length()==len)
+			{
+				arr[k]=a1[i];
+				k++;
+
+			}
+		}
+
+		int index=inp1.indexOf('_');//extracting index so that i can use that index to replce underscore
+
+		for(int i=0;i<arr.length;i++)
+		{
+			//System.out.print(arr[i]);
+			//char a=arr[i].charAt(index);
+
+			inp1.replace('_',arr[i].charAt(index));
+			System.out.println(inp1);
+			if(inp1.equals(arr[i]))
+			{
+				System.out.println(arr[i]);
+				s1.append(arr[i]);
+				s1.append(":");
+				//inp1=inn;
+			}
+			inp1=inn;
+		}
+		System.out.println(s1.toString());
+
+	}
+
+}

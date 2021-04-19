@@ -1,0 +1,3 @@
+module BasicPrograms {
+	requires junit;
+}

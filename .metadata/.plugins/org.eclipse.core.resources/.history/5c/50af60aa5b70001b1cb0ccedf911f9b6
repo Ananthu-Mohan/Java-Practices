@@ -1,0 +1,10 @@
+package extra;
+
+public class Sequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input1 = "we8+you2-7to/*32";
+	}
+
+}

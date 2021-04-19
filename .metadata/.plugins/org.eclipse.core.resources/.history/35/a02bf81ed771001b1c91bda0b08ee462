@@ -1,0 +1,15 @@
+package extra;
+
+public class GenerateLargest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input1 = 7036;
+		int max = 0,max2=0;
+		StringBuffer sbuff = new StringBuffer();
+		
+		int temp = input1,rem = 0;
+		
+	}
+
+}

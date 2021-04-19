@@ -1,0 +1,13 @@
+package extra;
+import java.util.*;
+public class secretCode {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner S = new Scanner(System.in);
+		String str = new String();
+		int input1,input2,input3;
+		
+	}
+
+}

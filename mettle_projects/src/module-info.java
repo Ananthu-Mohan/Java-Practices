@@ -1,0 +1,2 @@
+module mettle_projects {
+}

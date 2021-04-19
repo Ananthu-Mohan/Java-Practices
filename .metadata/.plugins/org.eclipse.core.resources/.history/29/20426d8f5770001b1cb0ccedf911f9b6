@@ -1,0 +1,12 @@
+package extra;
+
+public class Series {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []input1 = {10,50,250,0,6250,31250,156250};
+		
+
+	}
+
+}
